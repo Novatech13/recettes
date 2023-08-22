@@ -1,0 +1,259 @@
+*{ overflow:auto} /* jusqu'à présent on a utilisé des id, des class ou des balises pour préciser ou s'appliquer les propriétées, dans ce cas on utilise le multiplié (*) pour preciser au css que les modifications s'adresse à l'ensemble du document. la propriété overflo gère les déboredement de texte au dela du body. en position auto, l'overflo gere le body*/
+
+
+body /* attribution de regle css a tout le body */
+{
+    background-color:rgb(108, 76, 37);
+    font-family:Arial, Helvetica, sans-serif; /* type de police pour l'ensemble du body*/
+}  
+
+/*p#categorie /*marqueur id categorie pour les id on utilise le # */
+/* ce style sera appliqué sur la balise paragraphe qui sera mentionné avec le marqueur categorie 
+{
+    background-color: black;
+    color:#e9e0d5 ;
+}*/
+
+p.categorie /*marqueur categorie pour les class on met un . */
+{               
+    background-color: black;
+    color:rgb(233, 224, 213) ; 
+    font-weight: bold;
+    text-align: center;
+    display:inline-block; /* pour afficher le paragraphe dans son bloc div */
+    margin-top: -23px;
+    padding: 8px 30px 8px 30px ; /* marge interieur */
+}
+
+div.categorie /*marqueur categorie pour les class on met un . */
+{ 
+    text-align:center;  
+    margin: 0px 30px 0px 30px ; /* pour chevocher le paragraphe recette sur le blanc*/ 
+    overflow: visible;  
+}
+
+h1 /* s'applique directement sur h1 sans id ni class */
+{
+    text-align:center;
+    margin: 10px 10px 30px 10px;
+}   
+
+div.contenu /* si on enleve la mention de la balise devant le ., alors tous les éléments qui auront une id ou class catégorie seront touché par le style et plus seulement les éléments dont la balise est mentioné avant le . */
+{
+    background-color: rgb(238, 231, 212);
+    box-shadow: 0px 0px 30px 10px rgb(25, 25, 25, 0.4); /* crée un effet d'ombre*/
+    margin: 30px 2% 30px 2%; /*gestion des marge exterieur on peut donner 2 valeurs: horizontale puis verticale, ou quatres valeurs en tournant dans le sens horaires et en commençant par le haut. De plus afin que les marges s'adapte aux differrentes largeurs de fenetre on peut l'exprimer en %*/               
+    padding: 0px 3%; /* gestion des marge interieur */
+    /*min-width: 600px; Empèche le chevauchement du texte si la fenetre se reduit trop, puis supprimé pour le responsive afin d'éviter le scroll horizontal */
+    overflow: visible;
+} 
+
+p.quantite
+{
+    text-align:center;               
+    max-width: 450px;
+    display:inline-block;
+}
+
+.center 
+{   
+    text-align:center;   
+}     
+
+div.separateur
+{
+    width: 100px;
+    height: 1px;
+    background-color: black;
+    margin-left: auto; /*comme le séparateur n'est qu'une div vide les propriété de centrage ne fonctionne pas, on est donc obliger de créer une marge droite et gauche que l'on positionne sur auto, ainssi lorsque la page séelargie le trait reste centré*/
+    margin-right: auto;
+    margin-bottom: 10px;               
+}          
+
+/* Comment superposer l'image et le tableau ?
+on enferme les 2 dans une même div, par hierarchie la div possède donc 2 enfants l'image et le tableaux, si l'on déclare la div en position relative, cela nous permet de déclarer l'enfants table en position absolue par rapport a la div comme l'image occupe toute la div avec la propriété bottom le tableau vient se positionner en bas de la div mere.*/
+div.pictable
+{               
+    position: relative;
+    text-align: center;;
+}
+
+img.pictable
+{
+    display: block; /* pour eviter le débordement de la div en bas de l'image*/
+    width: 100%; /* Pour que l'image occupe toute la largeur de la div */
+    max-height: 350px; /* afin que l'image ne deviennent pas énorme a l'agrandissement de la page internet, on fixe la hauteue d'image avec cette propriété, mais, l'image se déforme quand elle atteint une trop grande taille car elle perd son rapport hauteur largeur, pour pour palier a ce problème on ajoute la proriété object-fit qui gere les prportion de l'image */
+    object-fit: cover; /* Pour que l'image ne se deforme pas a l,'agrandissemenr de la page */
+    min-height: 300px; /* en cas d'image qui provient du net, cela permet de délimiter un emplacement image en attendant son téléchargement afin que les textes ne se chevauchent pas*/
+    background-color: beige; /* visualisation de la délimitation en attente de remplissage par l'image*/
+}    
+
+table.pictable
+{
+    position: absolute; /* Position absolue enfant en fonction de la position relative div parent*/
+    bottom: 0px; /* position absolue  en bas  sur la div mère */
+    width: 100%; /* Pour que la table occupe toute la largeur de la div */
+    height:50px; /*Hauteur du tableau */
+    color: rgb(238, 231, 212); 
+    background-color: rgba(108, 76, 37, 0.5); /* Couleur de fond du tableau avec niveau de transparence en 4eme position */  
+        
+}
+
+table.pictable th
+{
+    vertical-align: bottom;
+    font-size: 15px;     
+}
+
+table.pictable td
+{
+    vertical-align: top;
+    font-size: 13px;        
+}
+
+div.colonne h2
+{
+    text-align: center;
+    text-transform: uppercase; /* affiche le texte tout en majuscule*/
+    font-size: 20px; /* Taille de la police */
+    border-bottom: 2px solid rgb(108, 76, 37); /* souligne les 2 textes h2, mais c un trait sur toute la largeur de la page, nous voudrions sousligner que les texte, nous allons donc réduire la taille des colonnes à 45% au lieu de 50 dans la div colonne */
+    padding-bottom: 5px; /* évite de trop coller le souslignement aux h2 ingrédients et préparation */
+}
+
+
+div.ingredients
+{   
+    display:inline-block; /* permet d'afficher la colonne ingrédient dans la div, afin de laisser la place à la colonne preparation */
+    width: 100%; /*permet de partager en 2 parts egales le colonage, cela s'applique au 2 colonnes*/
+    margin-top: 10px; 
+   
+}
+
+div.listeIngredients p
+{
+    border:1px solid rgb(108, 76, 37);
+    padding: 5px 0px;
+    text-align: center;
+    font-size: 15px;
+    margin: 8px 0px;
+}
+
+div.preparation
+{
+    /*float: right; Permet d'afficher la colonne préparation à droite*/
+    width: 100%; /*permet de partager en 2 parts egales le colonage, cela s'applique au 2 colonnes*/
+    margin-top: 10px; 
+}
+
+table.preparation tr
+{
+    height: 10px; /*permet aux lignes de ne pas trop se rapprocher si on élargie la page a l'extreme*/
+}
+
+table.preparation td
+{
+    font-size: 15px;
+    vertical-align: top;
+    padding-left: 10px;
+    padding-bottom: 6px;
+
+}
+
+table.preparation p
+{
+    color:rgb(238, 231, 212);
+    background-color: rgb(108, 76, 37);
+    font-size: 18px;
+    text-align: center; 
+    width: 40px;
+    height: 30px;
+    padding-top: 10px;
+    border-radius: 50%; /* arrondi les angles d'un carré, a hauteur de 50% on obtient des ronds*/
+    margin-top: 0px;   
+}
+
+div.colonnesOverflow{overflow: auto;}
+
+
+
+
+
+
+
+
+
+
+
+
+/*style resonsive pour ordinateur*/
+@media only screen and (min-width: 768px)
+{      
+    div.contenu 
+    {  
+        min-width: 600px;  
+        background-color: rgb(238, 231, 212);
+        box-shadow: 0px 0px 30px 10px rgb(25, 25, 25, 0.4); 
+        margin: 60px 10% 80px 10%;
+        padding: 0px 5%;   
+        overflow: visible; 
+    }  
+    img.pictable
+    {
+    max-height: 700px; 
+    min-height: 600px; 
+    }
+    
+    table.pictable
+    {
+        position: absolute; /* Position absolue enfant en fonction de la position relative div parent*/
+        bottom: 0px; /* position absolue  en bas  sur la div mère */
+        height:80px; /*Hauteur du tableau */        
+    }
+
+    div.colonne h2
+    {
+    font-size: 25px; /* Taille de la police */
+    }
+
+    table.pictable th{font-size: 20px;}
+
+    table.pictable td{font-size: 17px;} 
+
+    div.colonne h2
+    {
+        font-size: 25px; /* Taille de la police */
+        border-bottom: 3px solid rgb(108, 76, 37); /* souligne les 2 textes h2*/
+        padding-bottom: 5px; /* évite de trop coller le souslignement aux h2 ingrédients et préparation */
+    }
+
+    div.ingredients
+    {   
+        display:inline-block; /* permet d'afficher la colonne ingrédient dans la div, afin de laisser la place à la colonne preparation */
+        width: 30%; /*permet de partager en 2 parts egales le colonage, cela s'applique au 2 colonnes*/
+        margin-top: 10px; 
+    
+    }
+
+    div.listeIngredients p
+    {
+        border:1px solid rgb(108, 76, 37);
+        padding: 5px 0px;
+        text-align: center;
+        font-size: 20px;
+        margin: 8px 0px;
+    }
+
+    div.preparation
+    {
+        float: right; /*Permet d'afficher la colonne préparation à droite*/
+        width: 60%; /*permet de partager en 2 parts egales le colonage, cela s'applique au 2 colonnes*/
+        margin-top: 10px; 
+    }
+
+    table.preparation td
+    {
+        font-size: 18px;
+    }
+}
+
+
