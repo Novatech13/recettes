@@ -186,14 +186,14 @@ div.colonnesOverflow{overflow: auto;}
 
 
 /*style resonsive pour ordinateur*/
-@media only screen and (min-width: 768px)
+@media only screen and (min-width: 768px)/* création d'une condition de changement d'affichage losque la largeur de l'écran devient plus petit que 768 pixel, dans ces conditions on retravaille le design pour qu'il s'adapte au petit écran*/
 {      
     div.contenu 
     {  
-        min-width: 600px;  
+        min-width: 1047px;  
         background-color: rgb(238, 231, 212);
         box-shadow: 0px 0px 30px 10px rgb(25, 25, 25, 0.4); 
-        margin: 60px 10% 80px 10%;
+        margin: 60px 10% 60px 10%;
         padding: 0px 5%;   
         overflow: visible; 
     }  
@@ -255,5 +255,12 @@ div.colonnesOverflow{overflow: auto;}
         font-size: 18px;
     }
 }
-
-
+/* Limitation de taille d'image sur trés grand écran*/
+@media only screen and (min-width: 1500px)
+{
+    div.contenu 
+    {  
+        margin: 60px auto 60px auto;
+        width: 1047px;
+    } 
+}
