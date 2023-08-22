@@ -4,7 +4,7 @@
 body /* attribution de regle css a tout le body */
 {
     background-color:rgb(108, 76, 37);
-    font-family:cursive; /* type de police pour l'ensemble du body*/
+    font-family:Arial, Helvetica, sans-serif; /* type de police pour l'ensemble du body*/
 }  
 
 /*p#categorie /*marqueur id categorie pour les id on utilise le # */
@@ -133,10 +133,10 @@ div.ingredients
 div.listeIngredients p
 {
     border:1px solid rgb(108, 76, 37);
-    padding: 8px 0px;
+    padding: 5px 0px;
     text-align: center;
     font-size: 20px;
-    margin: 18px 0px;
+    margin: 8px 0px;
 }
 
 div.preparation
@@ -156,7 +156,7 @@ table.preparation td
     font-size: 18px;
     vertical-align: top;
     padding-left: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 6px;
 
 }
 
@@ -166,11 +166,11 @@ table.preparation p
     background-color: rgb(108, 76, 37);
     font-size: 18px;
     text-align: center; 
-    width: 30px;
+    width: 40px;
     height: 30px;
-    padding-top: 3px;
+    padding-top: 10px;
     border-radius: 50%; /* arrondi les angles d'un carré, a hauteur de 50% on obtient des ronds*/
-    margin-top: 3px;   
+    margin-top: 0px;   
 }
 
 div.colonnesOverflow{overflow: auto;}
