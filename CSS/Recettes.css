@@ -218,7 +218,7 @@ de 768px, donc se qui est valable pour toutes les tailles d"écran nest pas modi
 
     div.colonne h2
     {
-        font-size: 25px; /* Taille de la police */
+        font-size: 20px; /* Taille de la police */
         border-bottom: 3px solid black; 
         padding-bottom: 5px; 
     }
@@ -231,7 +231,7 @@ de 768px, donc se qui est valable pour toutes les tailles d"écran nest pas modi
 
     div.listeIngredients p
     {
-        font-size: 20px;
+        font-size: 15px;
         margin: 18px 0px;
     }
 
@@ -249,7 +249,7 @@ de 768px, donc se qui est valable pour toutes les tailles d"écran nest pas modi
 
     table.preparation td
     {
-        font-size: 18px;
+        font-size: 15px;
     }
       
     @media only screen and (min-width: 1000px)
