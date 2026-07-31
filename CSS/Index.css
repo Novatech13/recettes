@@ -1,0 +1,115 @@
+*{ overflow:auto} 
+
+body 
+{
+    background-color: black;
+    font-family:Arial, Helvetica, sans-serif; 
+    color:black;
+}
+div.contenu 
+{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 40px 10px rgba(133, 133, 123, 0.938); 
+    margin: 10px 2% 10px 2%; 
+    padding: 3% 5%; 
+    overflow: visible;
+}  
+h1 
+{
+    font-size: 35px;
+    text-align:center;
+    margin: 30px 10px 30px 10px;
+}  
+div.separateur
+{
+    width: 200px;
+    height: 5px;
+    background-color: black;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 10px;               
+}
+
+div.image
+{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+div.image img
+{   
+    display: block; /* pour eviter le débordement de la div en bas de l'image*/
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;/* Pour que l'image ne se deforme pas a l,'agrandissemenr de la page*/ 
+    min-height: 50px;
+}
+
+h4
+{
+    text-align:left;
+    font-size: 30px;
+}
+p
+{
+    color:black;
+    font-size: 25px;
+    margin-left: 40px; 
+}
+
+
+
+
+
+/*Style ordi*************************************************************************************************/
+@media only screen and (min-width: 768px)
+{
+    div.contenu 
+    {
+        max-width: 700px;
+        /*min-width: 300;*/
+        background-color: white;
+        box-shadow: 0px 0px 40px 10px rgba(133, 133, 123, 0.938); 
+        margin: 60px 9% 60px 9%; 
+        padding: 3% 5%; 
+        overflow: visible;
+    }  
+       
+    div.image
+    {
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    div.image img
+    {   
+        display: block; /* pour eviter le débordement de la div en bas de l'image*/
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;/* Pour que l'image ne se deforme pas a l,'agrandissemenr de la page */
+        min-height: 50px; 
+    } 
+
+    h4
+    {
+        text-align:left;
+        font-size: 20px;
+    }
+    p
+    {
+        color:black;
+        font-size: 15px;
+        margin-left: 40px; 
+    }
+    div.colonnesOverflow{overflow: auto;}
+    
+         
+    @media only screen and (min-width: 1000px)
+    {
+        div.contenu 
+        {
+            margin: 60px auto 60px auto; 
+        }  
+    } 
+}

@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../VSCode"
+		}
+	],
+	"settings": {
+		"dotnet.defaultSolution": "Base de programmation/Base de programmation.sln",
+		"liveServer.settings.multiRootWorkspaceName": "VSCode"
+	}
+}
