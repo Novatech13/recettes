@@ -78,12 +78,12 @@ p
 
 /* Espacement du titre a premiere recette ha et entre les recettes p*/
 .categorie h4 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .liste-recettes p {
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /*Style ordi*************************************************************************************************/
