@@ -141,3 +141,10 @@ p
 :root {
     color-scheme: light only;
 }
+
+@media only screen and (max-width: 767px)
+{
+    #recettes-container {
+        columns: 1;
+    }
+}
