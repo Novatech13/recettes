@@ -1,45 +1,73 @@
 <!DOCTYPE html> 
-<html langue = "fr"> 
+<html lang="fr"> 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Les recettes de Philippe</title> 
-        <link rel = "stylesheet" href = "CSS\Index.css"/>
+        <link rel="stylesheet" href="CSS/Index.css"/>
         <link rel="icon" href="/recettes/ToqueFavicon.png" type="image/png">   
     </head>
 
     <body>
-        <div class = "contenu">
+        <div class="contenu">
             <h1>Les recettes de Philippe</h1> 
-            <div class = "separateur"></div>
+            <div class="separateur"></div>
             <br>                         
-            <div class = "image">                  
-                <img class = "pictable" src="Images/Index.png">
+            <div class="image">                  
+                <img class="pictable" src="Images/Index.png">
             </div>                   
-            <h4>Les Sauces</h4>
-            <h4>Les Crèmes</h4>
-            <a href="Béchamel.html"><p>- Béchamel</p></a>
-            <a href="Crème chocolat.html"><p>- Crème chocolat</p></a>
-            <a href="Crème citron.html"><p>- Crème citron</p></a>
-            <a href="Crème d'amandes.html"><p>- Crème d'amandes</p></a>
-            <a href="Crème patissière.html"><p>- Crème patissière</p></a>
-            <a href="Glaçage citron acidulé.html"><p>- Glaçage citron acidulé</p></a>
-            <h4>Les Pâtes</h4>
-            <a href="Pâte à crêpes.html"><p>- Pâte à crêpes</p></a>
-            <a href="Pâte sablée.html"><p>- Pâte sablée</p></a>
-            <a href="Pâte à tempura.html"><p>- Pâte à tempura</p></a>
-            <h4>Les Plats</h4>
-            <a href="Boeuf strogonoff.html"><p>- Boeuf strogonoff</p></a>
-            <h4>Boulangerie et Patisserie</h4>
-            <a href="Clafoutis.html"><p>- Clafoutis</p></a>
-            <a href="Fiadone.html"><p>- Fiadone</p></a>
-            <a href="Frittelle.html"><p>- Frittelle</p></a>
-            <a href="Gâteau des rois.html"><p>- Gâteau des rois</p></a>
-            <a href="Gâteau yaourt.html"><p>- Gâteau yaourt</p></a>
-            <a href="Gâteau 3.2.1.html"><p>- Gâteau 3.2.1</p></a>     
-            <a href="Pompe à l'huile provençale.html"><p>- Pompe à l'huile provençale</p></a>     
-        </div>      
-    </body>   
-    
-    
+
+            <div id="recettes-container">
+
+                <div class="categorie">
+                    <h4>Les Sauces</h4>
+                    <div class="liste-recettes"></div>
+                </div>
+
+                <div class="categorie">
+                    <h4>Les Crèmes</h4>
+                    <div class="liste-recettes">
+                        <a href="Béchamel.html"><p>- Béchamel</p></a>
+                        <a href="Crème chocolat.html"><p>- Crème chocolat</p></a>
+                        <a href="Crème citron.html"><p>- Crème citron</p></a>
+                        <a href="Crème d'amandes.html"><p>- Crème d'amandes</p></a>
+                        <a href="Crème patissière.html"><p>- Crème patissière</p></a>
+                        <a href="Glaçage citron acidulé.html"><p>- Glaçage citron acidulé</p></a>
+                    </div>
+                </div>
+
+                <div class="categorie">
+                    <h4>Les Pâtes</h4>
+                    <div class="liste-recettes">
+                        <a href="Pâte à crêpes.html"><p>- Pâte à crêpes</p></a>
+                        <a href="Pâte sablée.html"><p>- Pâte sablée</p></a>
+                        <a href="Pâte à tempura.html"><p>- Pâte à tempura</p></a>
+                    </div>
+                </div>
+
+                <div class="categorie">
+                    <h4>Les Plats</h4>
+                    <div class="liste-recettes">
+                        <a href="Boeuf strogonoff.html"><p>- Boeuf strogonoff</p></a>
+                    </div>
+                </div>
+
+                <div class="categorie">
+                    <h4>Boulangerie et Patisserie</h4>
+                    <div class="liste-recettes">
+                        <a href="Clafoutis.html"><p>- Clafoutis</p></a>
+                        <a href="Fiadone.html"><p>- Fiadone</p></a>
+                        <a href="Frittelle.html"><p>- Frittelle</p></a>
+                        <a href="Gâteau des rois.html"><p>- Gâteau des rois</p></a>
+                        <a href="Gâteau yaourt.html"><p>- Gâteau yaourt</p></a>
+                        <a href="Gâteau 3.2.1.html"><p>- Gâteau 3.2.1</p></a>     
+                        <a href="Pompe à l'huile provençale.html"><p>- Pompe à l'huile provençale</p></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="JS/tri-recettes.js"></script>
+    </body>
 </html>
