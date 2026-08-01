@@ -138,10 +138,13 @@ p
     } 
 }
 
+/* Force un fond blanc sur themes noir*/
 :root {
     color-scheme: light only;
 }
 
+
+/* Force index une colone sur petit ecran*/
 @media only screen and (max-width: 767px)
 {
     #recettes-container {
