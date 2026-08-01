@@ -138,21 +138,6 @@ p
     } 
 }
 
-
-/* Gestion mode sombre*/
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #121212;
-    }
-    div.contenu {
-        background-color: #1e1e1e;
-        box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.6);
-        color: white;
-    }
-    h1, h4, p {
-        color: white;
-    }
-    div.separateur {
-        background-color: white;
-    }
+:root {
+    color-scheme: light only;
 }
