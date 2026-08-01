@@ -76,6 +76,16 @@ p
 /* --- FIN AJOUT --- */
 
 
+/* Espacement du titre a premiere recette ha et entre les recettes p*/
+.categorie h4 {
+    margin-bottom: 10px;
+}
+
+.liste-recettes p {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
 /*Style ordi*************************************************************************************************/
 @media only screen and (min-width: 768px)
 {
